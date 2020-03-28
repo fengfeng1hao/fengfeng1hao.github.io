@@ -31,6 +31,7 @@ var reader = new FileReader(); //判断图片是否加载完毕
 reader.onload = function(evt){
 if(reader.readyState === 2){ //加载完毕后赋值
 img.src = evt.target.result;
+  console.log(evt.target.result)
 }
 }
 reader.readAsDataURL(file.files[0]);
