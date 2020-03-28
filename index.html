@@ -8,5 +8,22 @@
 </head>
 <body>
     <p>这是小霸王的简介</p>
+    <input type="file" id="imgfile" method="post" enctype="multipart/form-data">
+    <button type="button" onclick="ToBase64();">
 </body>
+<script>
+    function ToBase64() {
+ 
+    /*转换base64*/
+    var img = document.getElementById('imgfile')
+    var imgFile = new FileReader();
+    imgFile.readAsDataURL(img.files[0]);
+ 
+    imgFile.onload = function () {
+        var imgData = this.result; //base64数据  
+        console.log(imgData);
+    }
+    })
+
+</script>
 </html>
